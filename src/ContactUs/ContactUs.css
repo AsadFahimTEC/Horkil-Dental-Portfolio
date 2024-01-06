@@ -1,60 +1,63 @@
-body {
-  font-family: 'Arial', sans-serif;
+/* Testimonials.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+
+* {
   margin: 0;
   padding: 0;
+  font-family: "montserrat", sans-serif;
 }
 
-.contact-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 100vh;
-  /* background-color: #f0f0f0; */
+.testimonials {
+  padding: 40px 0;
+  /* background: #f1f1f1; */
+  color: #f0932b;
+  text-align: center;
 }
 
-.form-container,
-.info-container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.testimonial-inner {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
 }
 
-.form-container {
-  width: 60%;
+.border {
+  width: 160px;
+  height: 5px;
+  background: green;
+  margin: 26px auto;
 }
 
-.info-container {
-  width: 30%;
+.testimonial {
+  background: #fff;
+  padding: 30px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
-label {
-  margin-bottom: 8px;
+.name {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
 }
 
-input,
-textarea {
-  padding: 10px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.stars {
+  color: #f0932b;
+  margin-bottom: 20px;
 }
 
-.button {
-  background-color: #4caf50;
-  color: whitesmoke;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.button:hover {
-  background-color: blue;
+@media screen and (max-width: 960px) {
+  .w-full {
+    width: 100% !important;
+  }
+  .md\:w-1\/2 {
+    width: 100% !important;
+  }
+  .lg\:w-1\/3 {
+    width: 100% !important;
+  }
 }

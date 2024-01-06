@@ -6,7 +6,7 @@ const About = () => {
       <div className="about-me" id="about-me">
         <div className="container">
           <div className="about-me-container">
-            <div className="about-me-title">About MD. Asaduzzaman</div>
+            <div className="about-me-title">About Horkil Alom</div>
 
             <div className="about-me-flex-container">
               <div className="about-me-image">
@@ -18,15 +18,15 @@ const About = () => {
                   />
                 </div>
                 <div className="main-image">
-                  <img src="https://i.ibb.co/nBYsmzS/Asad.png" />
+                  <img src="https://i.ibb.co/BCSjGhz/photo-1667133295308-9ef24f71952e-removebg-preview.png" />
                   <h3 className="text-center text-blue-500">
-                    Name: MD. Asaduzzaman
+                    Name: MD. Horkil Alom
                   </h3>
                   <h3 className="-ml-3 text-center text-red-500">
                     Nationality: Bangladeshi
                   </h3>
                   <h3 className="-mr-2 text-center text-green-500">
-                    Profession: Web Developer
+                    Profession: Dentist
                   </h3>
                 </div>
               </div>
@@ -38,13 +38,18 @@ const About = () => {
                   />
                 </div>
                 <div className="text">
-                  An ambitious Front-end Developer and designer who takes great
-                  pride in the presentation and quality of work.
+                  Horkil Alom is a dedicated and skilled dentist associated with
+                  Anika Dental Point. With a passion for oral health and patient
+                  care, Dr. Alom brings expertise and a gentle touch to his
+                  practice. Committed to providing personalized and
+                  comprehensive dental solutions, he strives to create a
+                  comfortable and positive experience for every patient.
                   <br />
                   <br />
-                  Smit is someone who can design and create simple, beautiful
-                  and easy to understand things. He is an expert at taking
-                  designs into original, exciting and new directions.
+                  Dr. Alom's commitment to excellence in dentistry is reflected
+                  in his unwavering dedication to helping individuals achieve
+                  optimal oral health and a confident smile at Anika Dental
+                  Point.
                 </div>
               </div>
             </div>
@@ -59,17 +64,6 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="portfolio-link">
-        <a
-          href="https://657694fe458d3727d144171a--creative-meerkat-68dfbc.netlify.app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          My Portfolio{" "}
-        </a>
       </div>
     </div>
   );

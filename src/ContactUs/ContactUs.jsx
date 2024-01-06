@@ -42,7 +42,7 @@ const ContactUs = () => {
 
   return (
     <div className="mt-4">
-      <div className="contact-container">
+      <div className="contact-container mr-6 ml-6">
         <div className="form-container">
           <h2 className="text-center text-2xl">Contact Us</h2>
           <form onSubmit={sendEmail}>
@@ -61,10 +61,7 @@ const ContactUs = () => {
         <div className="info-container">
           <h2 className="text-xl">Contact Information</h2>
           <p>
-            <strong>Phone:</strong> +880 179 083 3542
-          </p>
-          <p>
-            <strong>Email:</strong> fah485434@gmail.com
+            <strong>Phone:</strong> 01712255504
           </p>
         </div>
       </div>

@@ -1,74 +1,78 @@
-import "./Contact.css";
+
+import './Contact.css'; // Import your custom styles
+
 const Contact = () => {
   return (
-    <div className="CV-page mt-3">
-      <div className="CV-grid">
-        <div className="CV-grid-column">
-          <div className="CV-jobs">
-            <h2 className="CV-secondaryHeading CV-jobs-heading">
-              Relevant Experience
-            </h2>
-            <section className="CV-timeline CV-job">
-              <h3 className="CV-timeline-heading">
-                <span className="CV-timeline-heading-title">
-                  Learning Web Design and Development{" "}
-                </span>
-                &#8211;{" "}
-                <span className="CV-timeline-heading-location">
-                  Programming Hero{" "}
-                </span>
-                <small className="CV-timeline-heading-duration">
-                  July 2023 - Present
-                </small>
-              </h3>
-              <ul className="CV-timeline-details">
-                <li className="CV-job-timeline-item">
-                  Developed and maintained code for in-house and client websites
-                  utilizing HTML5, CSS3, Javascript, ReactJS, ExpressJS, and
-                  MongoDB.
-                </li>
-                <li className="CV-job-timeline-item">
-                  Tested front-end code in multiple browsers to ensure
-                  cross-browser compatability.
-                </li>
-                <li className="CV-job-timeline-item">
-                  Coordinated closely with other developers and digital
-                  producers to expedite projects.
-                </li>
-                <li className="CV-job-timeline-item">
-                  Responsive webpage designed properly for all devices.
-                </li>
-              </ul>
-            </section>
-            <section className="CV-timeline CV-job">
-              <h3 className="CV-timeline-heading">
-                <span className="CV-timeline-heading-title">
-                  Learning Basic Web Development{" "}
-                </span>
-                &#8211;{" "}
-                <span className="CV-timeline-heading-location">
-                  OpenClassroom Google
-                </span>
-                <small className="CV-timeline-heading-duration">
-                  June 2023
-                </small>
-              </h3>
-              <ul className="CV-timeline-details">
-                <li className="CV-timeline-details-item">
-                  Learning basic web development is an essential step for anyone
-                  interested in building a strong foundation in creating
-                  websites. It typically involves gaining proficiency in
-                  fundamental technologies such as HTML for structuring content,
-                  CSS for styling and layout, and JavaScript for adding
-                  interactivity. Understanding these core languages enables
-                  individuals to design visually appealing and responsive web
-                  pages.{" "}
-                </li>
-                <li className="CV-timeline-details-item">
-                Many online platforms offer tutorials, interactive coding exercises, and projects that facilitate hands-on learning, making basic web development accessible to individuals with varying levels of technical expertise. With these skills, beginners can embark on a rewarding journey to create their own web projects and further advance into more complex aspects of web development.
-                </li>
-              </ul>
-            </section>
+    <div className="mt-4">
+      {/* Image Marquee */}
+      <div className="marquee-container">
+        <div className="marquee">
+          {/* Group 1 */}
+          <div className="marquee-group">
+            <img
+              src="https://i.ibb.co/6tb7yr1/pexels-photo-5355894.webp"
+              alt="Image 1"
+              className="marquee-item"
+            />
+            {/* Add a gap between images */}
+            <div className="marquee-gap"></div>
+            <img
+              src="https://i.ibb.co/42wsXXj/pexels-photo-5355900-1.jpg"
+              alt="Image 2"
+              className="marquee-item"
+            />
+            <div className="marquee-gap"></div>
+            <img
+              src="https://i.ibb.co/WsZh5PD/pexels-photo-5355829.webp"
+              alt="Image 3"
+              className="marquee-item"
+            />
+            <div className="marquee-gap"></div>
+            <img
+              src="https://i.ibb.co/42wsXXj/pexels-photo-5355900-1.jpg"
+              alt="Image 4"
+              className="marquee-item"
+            />
+            <div className="marquee-gap"></div>
+            <img
+              src="https://i.ibb.co/5nYc8mC/pexels-photo-3881449.jpg"
+              alt="Image 5"
+              className="marquee-item"
+            />
+          </div>
+
+          {/* Group 2 (hidden for continuous scrolling) */}
+          <div aria-hidden="true" className="marquee-group">
+            {/* Duplicate of Group 1 for continuous scrolling effect */}
+            <img
+              src="https://i.ibb.co/KNvctLw/pexels-photo-6502544.webp"
+              alt="Image 1"
+              className="marquee-item"
+            />
+            <div className="marquee-gap"></div>
+            <img
+              src="https://i.ibb.co/FWnbwB8/pexels-photo-6528861-1.jpg"
+              alt="Image 2"
+              className="marquee-item"
+            />
+            <div className="marquee-gap"></div>
+            <img
+              src="https://i.ibb.co/n3q3SxG/pexels-photo-6529110.jpg"
+              alt="Image 3"
+              className="marquee-item"
+            />
+            <div className="marquee-gap"></div>
+            <img
+              src="https://i.ibb.co/FWnbwB8/pexels-photo-6528861-1.jpg"
+              alt="Image 4"
+              className="marquee-item"
+            />
+            <div className="marquee-gap"></div>
+            <img
+              src="https://i.ibb.co/ThSX2Jg/pexels-photo-6629414.jpg"
+              alt="Image 5"
+              className="marquee-item"
+            />
           </div>
         </div>
       </div>

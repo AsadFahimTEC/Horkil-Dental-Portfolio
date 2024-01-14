@@ -57,9 +57,13 @@ const Footer = () => {
             <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
           </a>
         </div>
-        <p className="text-center text-green-100 font-medium">
+        <p className="text-center text-green-100 font-bold">
+          <span className="text-blue-300">Shivpur Charmatha,</span> <span className="text-red-500">Molamgari,</span> <span className="text-green-600"> Kalai, Joypurhat.</span>
+        </p>
+        <p className="text-center text-green-100 font-smedium">
           &copy; 2023 <span className="text-red-500">Anika</span> Dental <span className="text-yellow-400">Point</span> All rights reserved.
         </p>
+        
       </footer>
     </div>
   );

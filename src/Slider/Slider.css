@@ -1,14 +1,14 @@
-* {
+/* * {
     box-sizing: border-box;
   }
   
   body {
     margin: 0;
-  }
+  } */
   
   .marquee {
     overflow: hidden;
-    height: 100vh; /* Set the height of the marquee */
+    /* height: 100vh; Set the height of the marquee */
   }
   
   .marquee-content {

@@ -41,7 +41,7 @@ const Contact = () => {
     }
   };
   return (
-    <div className="mt-4 ml-8 mr-8">
+    <div className="mt-4 ml-12 mr-12">
       <div className="contact-container">
         <div className="form-container">
           <h2 className="text-center text-2xl">Contact Us</h2>

@@ -14,12 +14,7 @@ const Banners = () => {
               journey to transform your smile into a masterpiece of confidence
               and beauty.
             </p>
-            <button
-                  type="button"
-                  className="btn btn-outline border-0 border-[#d926a9] hover:bg-[#d926a9] hover:border-[#d926a9] border-b-4 text-white hover:text-white"
-                >
-                  Get Started
-                </button>
+          
           </div>
           <div className="flex-shrink-0">
             <img

@@ -1,82 +1,93 @@
-
-
-import './ContactUs.css';
+import { useState } from "react";
+import "./ContactUs.css";
 
 const ContactUs = () => {
- 
+  const [testimonials, setTestimonials] = useState([
+    {
+      id: 1,
+      name: "Mosaddek Ali",
+      image:
+        "https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      rating: 3,
+      review:
+        "Anika Dental Point has been my go-to dental clinic for years. The staff is incredibly friendly, and Dr. Smith is an expert at what he does. The clinic is well-maintained, and they use the latest technology for treatments. I always feel comfortable and well taken care of during my visits..",
+    },
+    {
+      id: 2,
+      name: "Sara Begum",
+      image:
+        "https://images.pexels.com/photos/3585325/pexels-photo-3585325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      rating: 3,
+      review:
+        "I had a fantastic experience at Anika Dental Point. The team is professional, and they take the time to explain procedures thoroughly. The clinic is clean and inviting, and the atmosphere is calming. Dr. Horkil Alom is not only skilled but also genuinely cares about the well-being of his patients.",
+    },
+    {
+      id: 3,
+      name: "Aklima Khatun",
+      image:
+        "https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      rating: 3,
+      review:
+        "Anika Dental Point exceeded my expectations. The staff is efficient, and scheduling appointments is a breeze. Dr. Horkil Alom is attentive and made sure I understood every step of my treatment. The clinic's commitment to patient comfort is evident, making it a top choice for dental care in the area.",
+    },
+  ]);
+
+  const handleRatingChange = (testimonialId, newRating) => {
+    setTestimonials((prevTestimonials) =>
+      prevTestimonials.map((testimonial) =>
+        testimonial.id === testimonialId
+          ? { ...testimonial, rating: newRating }
+          : testimonial
+      )
+    );
+  };
 
   return (
-    <div className="testimonials">
-    <div className="testimonial-inner">
-      <h1 className='text-4xl hover:text-yellow-300'>Patient Review</h1>
-      <div className="border"></div>
+    <div className="testimonials mt-4">
+      <div className="testimonial-inner text-center">
+        <h1 className="text-4xl text-blue-400 hover:text-yellow-200 font-bold mb-8">
+          Client Review
+        </h1>
+        <div className="border"></div>
 
-      <div className="flex flex-wrap justify-center">
-        <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-          <div className="testimonial">
-            <img
-              src="https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt=""
-              className="rounded-full"
-            />
-            <div className="name text-red-500">Mosaddek Ali</div>
-            <div className="stars">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
+        <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mx-5 gap-5">
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className={`px-4 mb-8 bg-base-200 py-5 mt-10 shadow-xl rounded-md border ${
+                testimonial.rating === 3 ? "border-blue-500" : ""
+              }`}
+            >
+              <div className="testimonial">
+                <img
+                  src={testimonial.image}
+                  alt=""
+                  className="rounded-full w-[150px] mx-auto"
+                />
+                <div className="name text-red-500 text-xl font-semibold mt-4">
+                  {testimonial.name}
+                </div>
+                <div className="rating py-3 z-0">
+                  {Array.from({ length: 5 }, (_, index) => (
+                    <input
+                      key={index}
+                      type="radio"
+                      name={`rating-${testimonial.id}`}
+                      className="mask mask-star-2 bg-orange-400"
+                      checked={index + 1 === testimonial.rating}
+                      onClick={() =>
+                        handleRatingChange(testimonial.id, index + 1)
+                      }
+                    />
+                  ))}
+                </div>
+                <p className="text-blue-500">{testimonial.review}</p>
+              </div>
             </div>
-            <p className='text-blue-500'>
-            Anika Dental Point has been my go-to dental clinic for years. The staff is incredibly friendly, and Dr. Smith is an expert at what he does. The clinic is well-maintained, and they use the latest technology for treatments. I always feel comfortable and well taken care of during my visits.
-            </p>
-          </div>
-        </div>
-
-        <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-          <div className="testimonial">
-            <img
-              src="https://images.pexels.com/photos/3585325/pexels-photo-3585325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt=""
-              className="rounded-full"
-            />
-            <div className="name text-red-500">Sara Begum</div>
-            <div className="stars">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="far fa-star"></i>
-            </div>
-            <p className='text-blue-500'>
-            "I had a fantastic experience at Anika Dental Point. The team is professional, and they take the time to explain procedures thoroughly. The clinic is clean and inviting, and the atmosphere is calming. Dr. Horkil Alom is not only skilled but also genuinely cares about the well-being of his patients."
-            </p>
-          </div>
-        </div>
-
-        <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-          <div className="testimonial">
-            <img
-              src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt=""
-              className="rounded-full"
-            />
-            <div className="name text-red-500">Aklima Khatun</div>
-            <div className="stars">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-            </div>
-            <p className='text-blue-500'>
-            Anika Dental Point exceeded my expectations. The staff is efficient, and scheduling appointments is a breeze. Dr. Horkil Alom is attentive and made sure I understood every step of my treatment. The clinic's commitment to patient comfort is evident, making it a top choice for dental care in the area.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </div>
-  </div>
   );
 };
 

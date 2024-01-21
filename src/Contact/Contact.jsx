@@ -41,8 +41,8 @@ const Contact = () => {
     }
   };
   return (
-    <div className="mt-4">
-      <div className="contact-container mr-6 ml-6">
+    <div className="mt-4 ml-8 mr-8">
+      <div className="contact-container">
         <div className="form-container">
           <h2 className="text-center text-2xl">Contact Us</h2>
           <form onSubmit={sendEmail}>
